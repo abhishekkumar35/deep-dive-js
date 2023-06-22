@@ -1,4 +1,15 @@
-const Home = () => {
+import CourseCard from "@components/CourseCard";
+import { getAllCourses } from "@utils/serverCourseQueries";
+
+const Home = async () => {
+  const courses = await getAllCourses({
+    projectionField: {
+      courseName: 1,
+      courseDescription: 1,
+      courseOverview: 1,
+    },
+  });
+
   return (
     <section className="w-full flex-center flex-col">
       <h1 className="head_text text-center">
@@ -17,6 +28,18 @@ const Home = () => {
         with desktop publishing software like Aldus PageMaker including versions
         of Lorem Ipsum.
       </p>
+      <div className="flex justify-between items-start gap-5">
+        {courses.map((course) => {
+          return (
+            <CourseCard
+              key={course._id}
+              courseName={course.courseName}
+              courseDescription={course.courseDescription}
+              courseOverview={course.courseOverview}
+            ></CourseCard>
+          );
+        })}
+      </div>
     </section>
   );
 };

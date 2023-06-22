@@ -19,7 +19,7 @@ const Header = () => {
   }, []);
 
   return (
-    <nav className="flex-between w-full mb-16 pt-3">
+    <nav className="flex-between w-full mb-8 pt-3">
       <Link href="/" className="flex gap-2 flex-center">
         <Image
           src="/assets/images/logo.svg"
@@ -35,8 +35,8 @@ const Header = () => {
       <div className="sm:flex hidden">
         {session?.user ? (
           <div className="flex gap-3 md:gap-5">
-            <Link href="/create-prompt" className="black_btn">
-              Create Post
+            <Link href="/create-course" className="black_btn">
+              Create Course
             </Link>
 
             <button type="button" onClick={signOut} className="outline_btn">
@@ -95,11 +95,11 @@ const Header = () => {
                   My Profile
                 </Link>
                 <Link
-                  href="/create-prompt"
+                  href="/create-course"
                   className="dropdown_link"
                   onClick={() => setToggleDropdown(false)}
                 >
-                  Create Prompt
+                  Create Course
                 </Link>
                 <button
                   type="button"

@@ -10,12 +10,16 @@ const UserSchema = new Schema({
     unique: [true, "Email already exists!"],
     required: [true, "Email is required!"],
   },
+  image: {
+    // profile pic
+    type: String,
+  },
   isAdmin: {
     type: Boolean,
-    required: false,
+    required: true,
     default: false,
   },
-  // purchasedCourses: [],
+  purchasedCourses: [{ type: Schema.Types.ObjectId, ref: "Course" }],
 });
 
 const User = models.User || model("User", UserSchema);

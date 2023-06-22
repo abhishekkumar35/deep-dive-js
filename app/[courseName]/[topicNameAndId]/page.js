@@ -43,7 +43,6 @@ export async function generateMetadata({
 
 const Topic = async ({ params: { courseName, topicNameAndId } }) => {
   const topicData = await getTopic3(topicNameAndId);
-  console.log("topicData ====================> ", topicData);
   return (
     <div>
       <h1> This is the Topic component </h1>
