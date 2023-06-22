@@ -7,7 +7,7 @@ import SessionProvider from "@components/SessionProvider";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Deep Dive into Javascript",
+  title: "Deep Dive into Javascript and reactJs",
   description: "Deep Dive JS",
   keywords: "Javascipt, ReactJS etc",
 };
