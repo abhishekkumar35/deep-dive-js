@@ -4,7 +4,6 @@ import { useState } from "react";
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import CourseForm from "@components/CourseForm";
-import LexicalTextEditor from "@components/LexicalTextEditor/LexicalTextEditor";
 
 const CreateCourse = () => {
   const router = useRouter();
@@ -56,8 +55,6 @@ const CreateCourse = () => {
         isSubmitting={isSubmitting}
         handleSubmit={createCourse}
       />
-
-      <LexicalTextEditor />
     </>
   );
 };

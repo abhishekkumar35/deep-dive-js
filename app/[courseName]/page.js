@@ -2,7 +2,7 @@ import { getCourseByName, getCourseMetaData } from "@utils/serverCourseQueries";
 
 export async function generateMetadata({ params: { courseName } }) {
   const course = await getCourseMetaData({ courseName });
-  return course.metaData;
+  return course.metaData ? course.metaData : null;
 }
 
 const Course = async ({ params: { courseName } }) => {

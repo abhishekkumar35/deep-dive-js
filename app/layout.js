@@ -24,7 +24,6 @@ const RootLayout = ({ children }) => {
           <main className="app">
             <Header />
             {children}
-            <h1>Hello</h1>
             <Footer />
           </main>
         </SessionProvider>
